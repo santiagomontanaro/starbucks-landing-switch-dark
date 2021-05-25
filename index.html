@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks landing | dark mode switch</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/7fbf930cc2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <section>
+        <header>
+            <a href=""> <img src="img/logo.png" class="logo" alt=""></a>
+            <div class="toggle"></div>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><span class="themeSwitch"></span></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>It's not just Coffee<br>It's <span>Starbucks</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis dignissimos, quia, iure explicabo eos aliquid, mollitia sit reprehenderit vitae libero animi? Ullam accusamus, quis sit reiciendis labore repellendus quasi debitis.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="imgBox">
+                <img src="img/frapuccino.png" alt="">
+            </div>
+        </div>
+        <ul class="sci">
+            <li><a href=""><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+            <li><a href=""><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href=""><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+        </ul>
+    </section>    
+
+    <script>
+        let themeSwitch = document.querySelector('.themeSwitch');
+        let body = document.querySelector('body');
+        themeSwitch.onclick = function(){
+            themeSwitch.classList.toggle('active');
+            body.classList.toggle('dark');
+        }
+
+        let menutoggle = document.querySelector('.toggle');
+        let navigation = document.querySelector('.navigation');
+        menutoggle.onclick = function() {
+            menutoggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>
