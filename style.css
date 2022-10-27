@@ -39,7 +39,7 @@ section {
 
 header {
     position: absolute;
-    top: 0;  
+    top: 0;
     left: 0;
     width: 100%;
     padding: 10px 100px;
@@ -200,25 +200,31 @@ header ul li a {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.themeSwitch::before {
-    content: '\f186';
-    font-family: fontAwesome;
     color: var(--white);
     font-size: 20px;
 }
 
-.themeSwitch.active::before {
-    content: '\f185';
+
+.active {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: var(--black);
+    display: inline-flex;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /*  responsive  */
 
-@media (max-width: 991px){
+@media (max-width: 991px) {
     section {
         padding: 150px 20px;
     }
+
     header {
         padding: 20px;
     }
@@ -227,26 +233,33 @@ header ul li a {
         bottom: 20px;
         left: 20px;
     }
+
     .content {
         flex-direction: column-reverse;
     }
+
     .content .textBox,
     .content .imgBox {
         max-width: 100%;
         margin-right: 0;
     }
+
     .content .imgBox img {
         max-width: 250px;
     }
+
     .content .imgBox::before {
         clip-path: circle(125px at center);
     }
+
     .content .textBox h2 {
         font-size: 1.75em;
     }
+
     .navigation {
-       display: none;
+        display: none;
     }
+
     .toggle {
         position: relative;
         width: 30px;
@@ -260,6 +273,7 @@ header ul li a {
         z-index: 1000;
         transition: all .2s ease-in-out;
     }
+
     .toggle.active {
         background: url(img/close.png);
         filter: invert(1);
@@ -268,6 +282,7 @@ header ul li a {
         background-repeat: no-repeat;
         transition: all .2s;
     }
+
     .navigation.active {
         display: flex;
         position: fixed;
@@ -280,14 +295,17 @@ header ul li a {
         background: var(--white);
         flex-direction: column;
     }
+
     header ul li {
         margin: 10px 0;
         margin-left: 0;
     }
+
     header ul li a {
         font-size: 1.5em;
         font-weight: 300;
     }
+
     .dark .toggle {
         filter: invert(0);
     }
